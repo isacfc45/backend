@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Resources\Transformers;
+namespace App\Transformers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
@@ -18,9 +18,9 @@ class PerfilResource extends JsonResource
         parent::__construct($resource);
     }
 
-    public function toArray(Request $request): array
+    public function toArray($request)
     {
-        return parent::toArray([
+        return [
             'name' => $this->name,
             'email' => $this->name,
             'nome_certificado' => $this->nome_certificado,
@@ -37,7 +37,6 @@ class PerfilResource extends JsonResource
             'tipo' => $this->tipo,
             'img_profile' => $this->img_profile,
             'email_verified_at' => $this->email_verified_at
-
-        ]);
+        ];
     }
 }

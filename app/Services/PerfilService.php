@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Services\IPerfilService;
+use App\Models\User;
 
 class PerfilService implements IPerfilService
 {
