@@ -11,8 +11,12 @@ use App\Transformers\PerfilResource;
 
 class PerfilController extends Controller
 {
+    private IPerfilService $perfilService;
 
-    public function __construct(protected PerfilService $perfilService) {}
+    public function __construct(IPerfilService $perfilService)
+    {
+        $this->perfilService = $perfilService;
+    }
 
     public function index()
     {
@@ -20,7 +24,7 @@ class PerfilController extends Controller
             $usuario = $this->perfilService->getUsuarioAutenticado();
             return PerfilResource::make($usuario);
         } catch (\Throwable | \Exception $e) {
-            return ResponseService::exception($e,  401);
+            return ResponseService::exception($e,  401, "Usuário não autenticado");
         }
     }
 }

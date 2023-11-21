@@ -22,21 +22,19 @@ class PerfilResource extends JsonResource
     {
         return [
             'name' => $this->name,
-            'email' => $this->name,
+            'email' => $this->email,
             'nome_certificado' => $this->nome_certificado,
-            'password' => $this->password,
-            'google_id' => $this->google_id,
             'cpf' => $this->cpf,
-            'genero' => $this->genero,
-            'formacao' => $this->formacao,
             'telefone' => $this->telefone,
             'endereco' => $this->endereco,
+            'cep' => $this->cep,
+            'cidade' => $this->cidade,
+            'estado' => $this->estado,
             'formacao' => $this->formacao,
-            'pne' => $this->pne,
-            'descricao_pne' => $this->descricao_pne,
-            'tipo' => $this->tipo,
+            'instituicao' => $this->instituicao,
+            'area' => $this->area,
+            'subarea' => $this->subarea,
             'img_profile' => $this->img_profile,
-            'email_verified_at' => $this->email_verified_at
         ];
     }
 }

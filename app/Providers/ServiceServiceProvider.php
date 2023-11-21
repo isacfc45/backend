@@ -5,8 +5,8 @@ namespace App\Providers;
 use App\Services\AuthService;
 use App\Services\IAuthService;
 use Illuminate\Support\ServiceProvider;
-use App\Service\IPerfilService;
-use App\Service\PerfilService;
+use App\Services\IPerfilService;
+use App\Services\PerfilService;
 
 class ServiceServiceProvider extends ServiceProvider
 {
